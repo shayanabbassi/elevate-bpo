@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Elevate BPO — Pay-Per-Call Lead Generation That Converts</title>
+<meta name="description" content="Elevate BPO connects insurance agents and home-service businesses with high-intent inbound callers. Verified calls, live tracking, fast payouts.">
+
+<!-- ============================================================
+     ELEVATE BPO — Single-file website
+     HOW TO EDIT:
+     1. Phone / email / address  -> search for "CONTACT INFO"
+     2. Stats numbers            -> search for "STATS"
+     3. Testimonials             -> search for "TESTIMONIALS"
+     4. Services                 -> search for "SERVICES GRID"
+     5. Brand colors             -> edit the :root variables below
+     ============================================================ -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --ink:      #10243E;   /* deep navy — headings, footer      */
+  --blue:     #17406D;   /* primary blue — buttons, links      */
+  --marigold: #FFB020;   /* accent — highlights, CTAs          */
+  --marigold-dark:#E89A00;
+  --cloud:    #F4F7FB;   /* alternate section background       */
+  --slate:    #47586E;   /* body text                          */
+  --line:     #E3E9F1;
+  --white:    #FFFFFF;
+  --radius:   14px;
+  --shadow:   0 10px 30px rgba(16,36,62,.08);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',system-ui,sans-serif;color:var(--slate);background:var(--white);line-height:1.65;font-size:16px}
+h1,h2,h3,h4{font-family:'Archivo',sans-serif;color:var(--ink);line-height:1.15;letter-spacing:-.01em}
+img{max-width:100%;display:block}
+a{text-decoration:none;color:inherit}
+.container{width:min(1140px,92%);margin:0 auto}
+section{padding:88px 0}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-family:'Archivo',sans-serif;font-weight:700;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--blue);margin-bottom:14px}
+.eyebrow::before{content:"";width:26px;height:3px;background:var(--marigold);border-radius:2px}
+.section-title{font-size:clamp(1.7rem,3.4vw,2.5rem);font-weight:800;margin-bottom:16px}
+.section-lead{max-width:620px;margin-bottom:44px}
+.btn{display:inline-block;font-family:'Archivo',sans-serif;font-weight:700;font-size:.95rem;padding:14px 30px;border-radius:10px;transition:transform .18s ease, box-shadow .18s ease, background .18s ease;cursor:pointer;border:none}
+.btn:hover{transform:translateY(-2px)}
+.btn:focus-visible{outline:3px solid var(--marigold);outline-offset:2px}
+.btn-gold{background:var(--marigold);color:var(--ink);box-shadow:0 8px 22px rgba(255,176,32,.35)}
+.btn-gold:hover{background:var(--marigold-dark)}
+.btn-ghost{background:transparent;color:var(--white);border:2px solid rgba(255,255,255,.45)}
+.btn-ghost:hover{border-color:var(--white)}
+.btn-blue{background:var(--blue);color:var(--white)}
+.btn-blue:hover{background:var(--ink)}
+
+/* ---------- TOP BAR ---------- */
+.topbar{background:var(--ink);color:#B9C6D8;font-size:.83rem;padding:9px 0}
+.topbar .container{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.topbar a{color:#DCE5F0}
+.topbar a:hover{color:var(--marigold)}
+.topbar .socials{display:flex;gap:16px}
+
+/* ---------- NAV ---------- */
+header.nav{position:sticky;top:0;z-index:50;background:var(--white);border-bottom:1px solid var(--line)}
+.nav .container{display:flex;align-items:center;justify-content:space-between;height:76px}
+.logo{display:flex;align-items:center;gap:11px;font-family:'Archivo',sans-serif;font-weight:900;font-size:1.32rem;color:var(--ink)}
+.logo .mark{width:42px;height:42px;border-radius:11px;background:var(--ink);display:grid;place-items:center}
+.logo .mark svg{width:24px;height:24px}
+.logo span em{font-style:normal;color:var(--blue)}
+nav.menu{display:flex;gap:30px;font-weight:600;font-size:.94rem;color:var(--ink)}
+nav.menu a{position:relative;padding:6px 0}
+nav.menu a::after{content:"";position:absolute;left:0;bottom:0;width:0;height:3px;background:var(--marigold);border-radius:2px;transition:width .2s ease}
+nav.menu a:hover::after{width:100%}
+.nav-cta{display:flex;gap:12px;align-items:center}
+.hamburger{display:none;background:none;border:none;font-size:1.7rem;color:var(--ink);cursor:pointer}
+
+/* ---------- HERO ---------- */
+.hero{background:linear-gradient(135deg,var(--ink) 0%, #0D3054 55%, var(--blue) 100%);color:#D7E2EF;padding:96px 0 0;overflow:hidden}
+.hero .container{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
+.hero .kicker{display:inline-block;background:rgba(255,176,32,.14);border:1px solid rgba(255,176,32,.4);color:var(--marigold);font-family:'Archivo',sans-serif;font-weight:700;font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;padding:7px 16px;border-radius:100px;margin-bottom:22px}
+.hero h1{color:var(--white);font-size:clamp(2.1rem,4.6vw,3.4rem);font-weight:900;margin-bottom:20px}
+.hero h1 .gold{color:var(--marigold)}
+.hero p.sub{font-size:1.06rem;max-width:520px;margin-bottom:32px;color:#C4D2E2}
+.hero .cta-row{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:52px}
+.hero-stats{display:flex;gap:0;border-top:1px solid rgba(255,255,255,.14);padding:26px 0 60px}
+.hero-stats div{flex:1;padding-right:22px}
+.hero-stats div+div{border-left:1px solid rgba(255,255,255,.14);padding-left:22px}
+.hero-stats b{display:block;font-family:'Archivo',sans-serif;font-size:1.7rem;font-weight:800;color:var(--white)}
+.hero-stats small{font-size:.82rem;color:#9FB2C8;text-transform:uppercase;letter-spacing:.06em}
+/* signature: live call waveform */
+.hero-visual{position:relative;align-self:stretch;display:flex;align-items:flex-end}
+.call-card{background:rgba(255,255,255,.06);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.15);border-radius:20px 20px 0 0;padding:30px 30px 0;width:100%}
+.call-card .live{display:inline-flex;align-items:center;gap:8px;font-size:.8rem;font-weight:600;color:#7CE3A8;text-transform:uppercase;letter-spacing:.1em;margin-bottom:14px}
+.call-card .live::before{content:"";width:9px;height:9px;border-radius:50%;background:#2ECC71;animation:pulse 1.6s infinite}
+@keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(46,204,113,.5)}50%{box-shadow:0 0 0 7px rgba(46,204,113,0)}}
+.call-card h3{color:var(--white);font-size:1.05rem;margin-bottom:4px}
+.call-card p{font-size:.85rem;color:#9FB2C8;margin-bottom:20px}
+.wave{display:flex;align-items:flex-end;gap:5px;height:120px}
+.wave i{flex:1;background:linear-gradient(to top,var(--marigold),#FFD57A);border-radius:4px 4px 0 0;animation:wave 1.3s ease-in-out infinite}
+@keyframes wave{0%,100%{transform:scaleY(.35)}50%{transform:scaleY(1)}}
+.wave i:nth-child(2n){animation-delay:.15s}
+.wave i:nth-child(3n){animation-delay:.3s}
+.wave i:nth-child(4n){animation-delay:.45s}
+.wave i:nth-child(5n){animation-delay:.6s}
+@media (prefers-reduced-motion: reduce){.wave i,.call-card .live::before{animation:none}}
+
+/* ---------- FEATURE STRIP ---------- */
+.strip{background:var(--white);padding:0}
+.strip .container{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;transform:translateY(-46px)}
+.strip .card{background:var(--white);border:1px solid var(--line);border-radius:var(--radius);padding:26px 26px;box-shadow:var(--shadow);display:flex;gap:16px;align-items:flex-start}
+.strip .ic{flex:0 0 46px;height:46px;border-radius:12px;background:var(--cloud);display:grid;place-items:center;font-size:1.3rem}
+.strip h4{font-size:1rem;margin-bottom:5px}
+.strip p{font-size:.88rem}
+
+/* ---------- ABOUT ---------- */
+.about{padding-top:30px}
+.about .container{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.about .photo{position:relative}
+.about .photo img{border-radius:var(--radius);box-shadow:var(--shadow);aspect-ratio:4/3.4;object-fit:cover;width:100%}
+.about .badge{position:absolute;bottom:-22px;right:-14px;background:var(--marigold);color:var(--ink);border-radius:12px;padding:16px 22px;font-family:'Archivo',sans-serif;font-weight:800;box-shadow:var(--shadow);text-align:center}
+.about .badge b{display:block;font-size:1.5rem;line-height:1.1}
+.about .badge small{font-size:.72rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase}
+.check-list{list-style:none;margin:26px 0 30px;display:grid;gap:13px}
+.check-list li{display:flex;gap:12px;align-items:flex-start;font-weight:500;color:var(--ink)}
+.check-list li::before{content:"✓";flex:0 0 24px;height:24px;border-radius:50%;background:var(--cloud);color:var(--blue);font-weight:800;display:grid;place-items:center;font-size:.85rem;margin-top:2px}
+.check-list li span b{color:var(--ink)}
+.check-list li span{font-weight:400;color:var(--slate)}
+
+/* ---------- SERVICES ---------- */
+.services{background:var(--cloud)}
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.svc{background:var(--white);border-radius:var(--radius);overflow:hidden;border:1px solid var(--line);transition:transform .2s ease, box-shadow .2s ease;display:flex;flex-direction:column}
+.svc:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
+.svc img{height:190px;width:100%;object-fit:cover}
+.svc .body{padding:24px 24px 26px;display:flex;flex-direction:column;gap:10px;flex:1}
+.svc h3{font-size:1.08rem}
+.svc p{font-size:.9rem;flex:1}
+.svc a{font-family:'Archivo',sans-serif;font-weight:700;font-size:.86rem;color:var(--blue)}
+.svc a:hover{color:var(--marigold-dark)}
+
+/* ---------- HOW IT WORKS ---------- */
+.steps-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:26px}
+.step{background:var(--white);border:1px solid var(--line);border-radius:var(--radius);padding:30px 24px;position:relative}
+.step .num{font-family:'Archivo',sans-serif;font-weight:900;font-size:2.4rem;color:var(--marigold);line-height:1;margin-bottom:14px}
+.step h4{font-size:1.02rem;margin-bottom:8px}
+.step p{font-size:.88rem}
+
+/* ---------- WHY US ---------- */
+.why{background:linear-gradient(135deg,var(--ink),#0D3054)}
+.why .eyebrow{color:var(--marigold)}
+.why .section-title,.why h4{color:var(--white)}
+.why .section-lead{color:#B9C6D8}
+.why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-bottom:56px}
+.why .card{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:var(--radius);padding:30px 26px}
+.why .card .ic{width:48px;height:48px;border-radius:12px;background:rgba(255,176,32,.15);display:grid;place-items:center;font-size:1.35rem;margin-bottom:16px}
+.why .card p{color:#B9C6D8;font-size:.9rem;margin-top:8px}
+.big-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;border-top:1px solid rgba(255,255,255,.14);padding-top:44px}
+.big-stats div{text-align:center}
+.big-stats b{display:block;font-family:'Archivo',sans-serif;font-size:2.1rem;font-weight:900;color:var(--marigold)}
+.big-stats small{color:#B9C6D8;font-size:.83rem;text-transform:uppercase;letter-spacing:.07em}
+
+/* ---------- TESTIMONIALS ---------- */
+.reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.review{background:var(--white);border:1px solid var(--line);border-radius:var(--radius);padding:30px 28px;box-shadow:var(--shadow);display:flex;flex-direction:column;gap:16px}
+.review .stars{color:var(--marigold);letter-spacing:3px;font-size:1.05rem}
+.review blockquote{font-size:.95rem;color:var(--ink);flex:1}
+.review .who{display:flex;align-items:center;gap:13px}
+.review .avatar{width:46px;height:46px;border-radius:50%;background:var(--blue);color:var(--white);display:grid;place-items:center;font-family:'Archivo',sans-serif;font-weight:800;font-size:.9rem}
+.review .who b{display:block;color:var(--ink);font-size:.94rem}
+.review .who small{font-size:.8rem}
+
+/* ---------- CTA BANNER ---------- */
+.cta-banner{background:var(--marigold);padding:64px 0}
+.cta-banner .container{display:flex;justify-content:space-between;align-items:center;gap:30px;flex-wrap:wrap}
+.cta-banner h2{font-size:clamp(1.5rem,3vw,2.1rem);max-width:560px}
+.cta-banner p{color:#5C4300;margin-top:8px;max-width:520px}
+
+/* ---------- CONTACT ---------- */
+.contact .container{display:grid;grid-template-columns:1fr 1.1fr;gap:60px}
+.info-item{display:flex;gap:16px;margin-bottom:22px;align-items:flex-start}
+.info-item .ic{flex:0 0 46px;height:46px;border-radius:12px;background:var(--cloud);display:grid;place-items:center;font-size:1.2rem}
+.info-item b{display:block;color:var(--ink);font-size:.95rem}
+.info-item span{font-size:.9rem}
+form.quote{background:var(--white);border:1px solid var(--line);border-radius:var(--radius);padding:34px;box-shadow:var(--shadow);display:grid;gap:16px}
+form.quote h3{font-size:1.2rem;margin-bottom:4px}
+.frow{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+input,select,textarea{width:100%;padding:13px 15px;border:1px solid var(--line);border-radius:10px;font-family:inherit;font-size:.93rem;color:var(--ink);background:var(--white)}
+input:focus,select:focus,textarea:focus{outline:2px solid var(--blue);border-color:var(--blue)}
+textarea{resize:vertical;min-height:110px}
+.form-note{font-size:.8rem;color:#8494A8;text-align:center}
+
+/* ---------- FOOTER ---------- */
+footer{background:var(--ink);color:#B9C6D8;padding:70px 0 0;font-size:.9rem}
+.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:44px;padding-bottom:50px}
+.foot-grid h4{color:var(--white);font-size:1rem;margin-bottom:18px}
+.foot-grid ul{list-style:none;display:grid;gap:11px}
+.foot-grid a:hover{color:var(--marigold)}
+.foot-brand p{margin:16px 0 20px;max-width:300px}
+.newsletter{display:flex;gap:8px;margin-top:14px}
+.newsletter input{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.18);color:var(--white)}
+.newsletter input::placeholder{color:#8FA2B8}
+.foot-bottom{border-top:1px solid rgba(255,255,255,.12);padding:20px 0;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;font-size:.82rem}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width:980px){
+  .hero .container,.about .container,.contact .container{grid-template-columns:1fr}
+  .hero-visual{display:none}
+  .services-grid,.why-grid,.reviews-grid{grid-template-columns:1fr 1fr}
+  .steps-grid{grid-template-columns:1fr 1fr}
+  .strip .container{grid-template-columns:1fr;transform:translateY(-30px)}
+  .foot-grid{grid-template-columns:1fr 1fr}
+  .big-stats{grid-template-columns:1fr 1fr;gap:34px}
+  nav.menu{display:none;position:absolute;top:76px;left:0;right:0;background:var(--white);flex-direction:column;gap:0;border-bottom:1px solid var(--line);box-shadow:var(--shadow)}
+  nav.menu.open{display:flex}
+  nav.menu a{padding:16px 5%;border-top:1px solid var(--line)}
+  .hamburger{display:block}
+  .nav-cta .btn{display:none}
+}
+@media (max-width:600px){
+  section{padding:64px 0}
+  .services-grid,.why-grid,.reviews-grid,.steps-grid,.frow{grid-template-columns:1fr}
+  .hero-stats{flex-direction:column;gap:18px}
+  .hero-stats div+div{border-left:none;padding-left:0;border-top:1px solid rgba(255,255,255,.14);padding-top:18px}
+}
+</style>
+</head>
+<body>
+
+<!-- ===== TOP BAR (CONTACT INFO) ===== -->
+<div class="topbar">
+  <div class="container">
+    <div>✉️ <a href="mailto:elevate.bpocontact@gmail.com">elevate.bpocontact@gmail.com</a> &nbsp;|&nbsp; 📞 <a href="tel:+12025550198">+1 (202) 555-0198</a></div>
+    <div class="socials">
+      <a href="#" aria-label="Facebook">Facebook</a>
+      <a href="#" aria-label="LinkedIn">LinkedIn</a>
+      <a href="#" aria-label="Instagram">Instagram</a>
+    </div>
+  </div>
+</div>
+
+<!-- ===== NAV ===== -->
+<header class="nav">
+  <div class="container">
+    <a href="#home" class="logo">
+      <span class="mark">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M4 20 L12 4 L20 20" stroke="#FFB020" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M8 20 L12 12 L16 20" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </span>
+      <span>Elevate <em>BPO</em></span>
+    </a>
+    <nav class="menu" id="menu">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#how">How It Works</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="nav-cta">
+      <a href="#contact" class="btn btn-gold">Get a Free Quote</a>
+      <button class="hamburger" aria-label="Open menu" onclick="document.getElementById('menu').classList.toggle('open')">☰</button>
+    </div>
+  </div>
+</header>
+
+<!-- ===== HERO ===== -->
+<section class="hero" id="home">
+  <div class="container">
+    <div>
+      <span class="kicker">Pay-Per-Call · Lead Generation</span>
+      <h1>Calls That Close.<br>Growth That <span class="gold">Compounds.</span></h1>
+      <p class="sub">Elevate BPO puts your team on the phone with people who are already looking for you. Verified inbound callers for insurance and home services — tracked live, billed only when quality standards are met.</p>
+      <div class="cta-row">
+        <a href="#contact" class="btn btn-gold">Start Getting Calls</a>
+        <a href="#services" class="btn btn-ghost">Explore Services</a>
+      </div>
+      <!-- STATS -->
+      <div class="hero-stats">
+        <div><b>1,200+</b><small>Active Clients</small></div>
+        <div><b>600+</b><small>Calls Routed Daily</small></div>
+        <div><b>98%</b><small>Connection Rate</small></div>
+      </div>
+    </div>
+    <div class="hero-visual" aria-hidden="true">
+      <div class="call-card">
+        <span class="live">Live campaign</span>
+        <h3>Inbound calls — right now</h3>
+        <p>Real-time volume across active campaigns</p>
+        <div class="wave">
+          <i style="height:38%"></i><i style="height:70%"></i><i style="height:52%"></i><i style="height:90%"></i>
+          <i style="height:60%"></i><i style="height:82%"></i><i style="height:45%"></i><i style="height:100%"></i>
+          <i style="height:66%"></i><i style="height:48%"></i><i style="height:86%"></i><i style="height:58%"></i>
+          <i style="height:74%"></i><i style="height:40%"></i><i style="height:92%"></i><i style="height:64%"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FEATURE STRIP ===== -->
+<div class="strip">
+  <div class="container">
+    <div class="card"><div class="ic">📡</div><div><h4>Transparent Call Tracking</h4><p>Every call is logged from source to close, so you always know what you're paying for.</p></div></div>
+    <div class="card"><div class="ic">🎯</div><div><h4>Intent-Verified Callers</h4><p>Callers are screened before transfer. If they're not a real prospect, you don't get billed.</p></div></div>
+    <div class="card"><div class="ic">⚡</div><div><h4>Launch Within 48 Hours</h4><p>Simple onboarding, clear terms, and campaigns live in two business days or less.</p></div></div>
+  </div>
+</div>
+
+<!-- ===== ABOUT ===== -->
+<section class="about" id="about">
+  <div class="container">
+    <div class="photo">
+      <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=900&q=75" alt="Elevate BPO team collaborating in the office" loading="lazy">
+      <div class="badge"><b>5+</b><small>Years in the industry</small></div>
+    </div>
+    <div>
+      <span class="eyebrow">About Elevate BPO</span>
+      <h2 class="section-title">A Call Partner Built Around One Metric: Your Close Rate</h2>
+      <p>Most lead vendors sell volume. We sell conversations that convert. Elevate BPO combines trained call specialists, strict pre-qualification, and honest reporting so your agents spend their day closing — not chasing dead numbers.</p>
+      <ul class="check-list">
+        <li><span><b>Human-screened transfers</b> — every caller speaks to a specialist before reaching you.</span></li>
+        <li><span><b>Dashboard you can trust</b> — call recordings, durations, and outcomes in one view.</span></li>
+        <li><span><b>Fair billing rules</b> — short calls, wrong numbers, and duplicates are never charged.</span></li>
+        <li><span><b>Support that answers</b> — a real account manager, reachable seven days a week.</span></li>
+      </ul>
+      <a href="#contact" class="btn btn-blue">Talk to Our Team</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SERVICES GRID ===== -->
+<section class="services" id="services">
+  <div class="container">
+    <span class="eyebrow">Our Services</span>
+    <h2 class="section-title">Campaigns We Run Best</h2>
+    <p class="section-lead">Every campaign is pay-per-call: you set the criteria, we deliver qualified callers, and you only pay for calls that meet the standard we agree on.</p>
+    <div class="services-grid">
+      <div class="svc">
+        <img src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=800&q=75" alt="Agent handling inbound customer calls" loading="lazy">
+        <div class="body"><h3>Inbound Call Handling</h3><p>Our trained agents answer, qualify, and route your inbound traffic so no opportunity rings out.</p><a href="#contact">Learn more →</a></div>
+      </div>
+      <div class="svc">
+        <img src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=800&q=75" alt="Outbound sales team at work" loading="lazy">
+        <div class="body"><h3>Outbound Campaigns</h3><p>Compliant, targeted outreach that warms up prospects and books them directly onto your calendar.</p><a href="#contact">Learn more →</a></div>
+      </div>
+      <div class="svc">
+        <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=800&q=75" alt="Live call transfer in progress" loading="lazy">
+        <div class="body"><h3>Live Call Transfers</h3><p>Pre-qualified prospects handed to your closers in real time — warm, verified, and ready to talk.</p><a href="#contact">Learn more →</a></div>
+      </div>
+      <div class="svc">
+        <img src="https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?auto=format&fit=crop&w=800&q=75" alt="Car on the road representing auto insurance" loading="lazy">
+        <div class="body"><h3>Auto Insurance Calls</h3><p>Drivers actively comparing coverage, filtered by state, vehicle status, and current-insurance criteria.</p><a href="#contact">Learn more →</a></div>
+      </div>
+      <div class="svc">
+        <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=800&q=75" alt="Healthcare professional representing health insurance" loading="lazy">
+        <div class="body"><h3>Health &amp; Medicare Calls</h3><p>ACA, private health, and Medicare-eligible callers connected to licensed agents at the moment of intent.</p><a href="#contact">Learn more →</a></div>
+      </div>
+      <div class="svc">
+        <img src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?auto=format&fit=crop&w=800&q=75" alt="Family home representing home services and home insurance" loading="lazy">
+        <div class="body"><h3>Home Services &amp; Insurance</h3><p>Homeowners requesting quotes for coverage, repairs, and improvements — routed to your local team.</p><a href="#contact">Learn more →</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== HOW IT WORKS ===== -->
+<section id="how">
+  <div class="container">
+    <span class="eyebrow">How It Works</span>
+    <h2 class="section-title">From Sign-Up to First Call in Four Steps</h2>
+    <div class="steps-grid">
+      <div class="step"><div class="num">1</div><h4>Tell Us Your Target</h4><p>Share your industry, licensed states or service areas, and daily call capacity.</p></div>
+      <div class="step"><div class="num">2</div><h4>Approve the Criteria</h4><p>We agree on what counts as a billable call — duration, intent, and qualification rules.</p></div>
+      <div class="step"><div class="num">3</div><h4>Go Live</h4><p>Campaigns launch within 48 hours and verified callers start reaching your team.</p></div>
+      <div class="step"><div class="num">4</div><h4>Review &amp; Scale</h4><p>Listen to recordings, check outcomes, and increase volume when the numbers work.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== WHY US ===== -->
+<section class="why">
+  <div class="container">
+    <span class="eyebrow">Why Elevate BPO</span>
+    <h2 class="section-title">Built for Buyers Who Check the Numbers</h2>
+    <p class="section-lead">We win clients by being easy to audit. Every claim we make about call quality is one click away from proof in your dashboard.</p>
+    <div class="why-grid">
+      <div class="card"><div class="ic">🔍</div><h4>Auditable Quality</h4><p>Recordings and dispositions on every call. Dispute a call and get an answer within 24 hours.</p></div>
+      <div class="card"><div class="ic">🧭</div><h4>Compliance First</h4><p>TCPA-aware processes, consent-based outreach, and clean traffic sources you can stand behind.</p></div>
+      <div class="card"><div class="ic">📈</div><h4>Scale on Your Terms</h4><p>Start small, prove ROI, then raise your daily cap — no long contracts, no volume lock-ins.</p></div>
+    </div>
+    <!-- STATS -->
+    <div class="big-stats">
+      <div><b>1,200+</b><small>Active Clients</small></div>
+      <div><b>600+</b><small>Calls Per Day</small></div>
+      <div><b>5+</b><small>Years Experience</small></div>
+      <div><b>24/7</b><small>Support Coverage</small></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== TESTIMONIALS ===== -->
+<section id="reviews">
+  <div class="container">
+    <span class="eyebrow">Client Feedback</span>
+    <h2 class="section-title">What Our Clients Say</h2>
+    <div class="reviews-grid">
+      <div class="review">
+        <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+        <blockquote>"We moved our whole auto book to Elevate after a two-week trial. The difference is simple: when the phone rings, the person on the other end actually wants a quote."</blockquote>
+        <div class="who"><div class="avatar">MR</div><div><b>Marcus Reed</b><small>Independent Auto Insurance Agent</small></div></div>
+      </div>
+      <div class="review">
+        <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+        <blockquote>"The billing rules are the fairest I've seen in this space. Short calls and duplicates come off the invoice without me having to fight for it."</blockquote>
+        <div class="who"><div class="avatar">AK</div><div><b>Ayesha Karim</b><small>Agency Owner, Health &amp; Medicare</small></div></div>
+      </div>
+      <div class="review">
+        <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+        <blockquote>"Live transfers arrive with the basics already covered — name, state, and what they're shopping for. My closers just close. Volume has been steady for six months."</blockquote>
+        <div class="who"><div class="avatar">TD</div><div><b>Tomás Delgado</b><small>Sales Director, Home Services</small></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CTA BANNER ===== -->
+<div class="cta-banner">
+  <div class="container">
+    <div>
+      <h2>Ready to Put Real Buyers on the Line?</h2>
+      <p>Tell us your target market and capacity — we'll send you a same-day proposal with pricing and expected call volume.</p>
+    </div>
+    <a href="#contact" class="btn btn-blue">Get a Free Quote</a>
+  </div>
+</div>
+
+<!-- ===== CONTACT ===== -->
+<section class="contact" id="contact">
+  <div class="container">
+    <div>
+      <span class="eyebrow">Contact Us</span>
+      <h2 class="section-title">Let's Talk About Your Call Volume</h2>
+      <p style="margin-bottom:30px">Reach out any way you like — or fill in the form and an account manager will get back to you within one business day.</p>
+      <!-- CONTACT INFO -->
+      <div class="info-item"><div class="ic">📞</div><div><b>Phone</b><span>+1 (202) 555-0198</span></div></div>
+      <div class="info-item"><div class="ic">✉️</div><div><b>Email</b><span>elevate.bpocontact@gmail.com</span></div></div>
+      <div class="info-item"><div class="ic">📍</div><div><b>Office</b><span>123 Main St ,Dallas,TX</span></div></div>
+      <div class="info-item"><div class="ic">🕘</div><div><b>Hours</b><span>Mon – Sat, 9 AM – 5 PM · Sunday closed</span></div></div>
+    </div>
+    <form class="quote" onsubmit="handleForm(event)">
+      <h3>Request a Free Quote</h3>
+      <div class="frow">
+        <input type="text" name="name" placeholder="Full name" required aria-label="Full name">
+        <input type="tel" name="phone" placeholder="Phone number" required aria-label="Phone number">
+      </div>
+      <input type="email" name="email" placeholder="Email address" required aria-label="Email address">
+      <select name="interest" required aria-label="Service of interest">
+        <option value="" disabled selected>What are you interested in?</option>
+        <option>Inbound Call Handling</option>
+        <option>Outbound Campaigns</option>
+        <option>Live Call Transfers</option>
+        <option>Auto Insurance Calls</option>
+        <option>Health &amp; Medicare Calls</option>
+        <option>Home Services &amp; Insurance</option>
+        <option>Publisher / Affiliate Partnership</option>
+      </select>
+      <textarea name="message" placeholder="Tell us about your target states, daily capacity, or anything else"></textarea>
+      <button type="submit" class="btn btn-gold">Send Request</button>
+      <p class="form-note">We reply within one business day. No spam, ever.</p>
+    </form>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="container">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a href="#home" class="logo" style="color:#fff">
+          <span class="mark"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 20 L12 4 L20 20" stroke="#FFB020" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M8 20 L12 12 L16 20" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <span>Elevate <em style="color:#7FB3E8">BPO</em></span>
+        </a>
+        <p>Pay-per-call lead generation for insurance and home-service businesses. Verified callers, honest tracking, fast growth.</p>
+        <h4>Join Our Newsletter</h4>
+        <form class="newsletter" onsubmit="event.preventDefault(); this.querySelector('input').value=''; alert('Subscribed — welcome aboard!');">
+          <input type="email" placeholder="Your email" required aria-label="Newsletter email">
+          <button class="btn btn-gold" type="submit" style="padding:12px 18px">Join</button>
+        </form>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#how">How It Works</a></li>
+          <li><a href="#contact">Get a Free Quote</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Campaigns</h4>
+        <ul>
+          <li><a href="#services">Auto Insurance</a></li>
+          <li><a href="#services">Health &amp; Medicare</a></li>
+          <li><a href="#services">Home Services</a></li>
+          <li><a href="#services">Live Transfers</a></li>
+          <li><a href="#services">Outbound</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Work Hours</h4>
+        <ul>
+          <li>Mon – Sat: 9 AM – 5 PM</li>
+          <li>Sunday: Closed</li>
+          <li style="margin-top:10px">Support: 24/7 for active clients</li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© <span id="yr"></span> Elevate BPO — All rights reserved.</span>
+      <span><a href="#">Privacy Policy</a> &nbsp;·&nbsp; <a href="#">Terms &amp; Conditions</a></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+document.getElementById('yr').textContent = new Date().getFullYear();
+
+// Close mobile menu when a link is tapped
+document.querySelectorAll('#menu a').forEach(a =>
+  a.addEventListener('click', () => document.getElementById('menu').classList.remove('open'))
+);
+
+// Simple form handler — replace with Formspree/EmailJS or your backend later
+function handleForm(e){
+  e.preventDefault();
+  alert('Thanks! Your request has been noted. Connect this form to Formspree or your email service to receive submissions.');
+  e.target.reset();
+}
+</script>
+</body>
+</html>
